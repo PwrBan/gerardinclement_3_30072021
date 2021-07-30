@@ -6,12 +6,16 @@ $color-tertiary: #99E2D0;
 {
     margin: 0;
 }
+header
+{
+    font-family: "roboto", sans-serif;
+}
 .header--logo
 {
     display: flex;
     justify-content: center;
     padding: 15px ;
-    box-shadow: 0 0 5px 0 grey;
+    box-shadow: 0 0 8px 0 grey;
         img 
         {
             width: 125px;
@@ -21,13 +25,48 @@ $color-tertiary: #99E2D0;
 {
     display: flex;
     justify-content: center;
-    background: rgb(201, 201, 201);
+    background: rgb(238, 237, 237);
     width: 100%;
     height: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    box-shadow: inset 0 3px 3px grey;
         &--bar
         {
             border: none;
             background: transparent;
+        }
+        .fa-map-marker-alt
+        {
+            margin: 10px 15px;
+            color: rgb(57, 57, 57);
+        }
+}
+.presentation
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: whitesmoke;
+    font-size: .7em;
+    padding: 5% 15%;
+        &--txt__small
+        {
+            padding: 5px 0;
+            font-size: 1.5em;
+            font-weight: 100;
+        }
+        &--btn
+        {
+            font-size: small;
+            padding: 0 5%;
+            height: 2.5rem;
+            margin: 5% 0;
+            border-radius: 20px 20px;
+            background: rgb(255,121,218);
+            background: linear-gradient($color-primary, $color-secondary);
+            color: white;
+            font-weight: 600;
+            border: none;
+            box-shadow: 3px 3px 4px grey;
         }
 }
