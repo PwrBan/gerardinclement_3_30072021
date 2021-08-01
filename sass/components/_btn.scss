@@ -1,0 +1,20 @@
+button
+{
+    border-radius: 20px 20px;
+    border: none;
+    box-shadow: 3px 3px 4px grey;
+    font-size: small;
+    background: none;
+    height: 2.5rem;
+}
+.btn
+{
+            
+            padding: 0 5%;
+            margin: 5% 0;
+            background: rgb(255,121,218);
+            background: linear-gradient($color-primary, $color-secondary);
+            color: white;
+            font-weight: 600;
+            
+}
