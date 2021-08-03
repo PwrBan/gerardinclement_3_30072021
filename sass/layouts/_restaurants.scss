@@ -11,7 +11,7 @@
         background: white;
         border-radius: 15px;
         width: 90%;
-        height: 300px;
+        flex: auto;
         margin: 5% 0;
         @include shadow;
         img
@@ -25,13 +25,12 @@
     {
         display: block;
         font-size: 1;
-        margin-block-start: 0;
-        margin-block-end: 0;
         margin-inline-start: 2rem;
-        margin-inline-end: 0;
+        margin: 1rem;
         h2
         {
             font-size: 1.5rem;
+            margin: .5rem 0;
         }
         em
         {
