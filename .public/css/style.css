@@ -1,10 +1,10 @@
-.header--logo {
+.header__logo {
   display: flex;
   justify-content: center;
   padding: 15px;
   box-shadow: 0 0 8px 0 grey;
 }
-.header--logo img {
+.header__logo img {
   width: 125px;
 }
 
@@ -17,6 +17,9 @@ button {
   height: 2.5rem;
   font-weight: 600;
 }
+button:hover {
+  box-shadow: 1px 1px 1px grey;
+}
 
 .btn {
   padding: 0 5%;
@@ -24,6 +27,11 @@ button {
   background: #ff79da;
   background: linear-gradient(#9356DC, #FF79DA);
   color: white;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: scale(0.95);
 }
 
 .fonctionnement {
@@ -31,7 +39,7 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.fonctionnement--step {
+.fonctionnement__step {
   background: #9356DC;
   color: white;
   border-radius: 100%;
@@ -62,7 +70,7 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.restaurants--tuiles {
+.restaurants__tuiles {
   display: flex;
   flex-direction: column;
   background: white;
@@ -72,19 +80,43 @@ button {
   margin: 5% 0;
   box-shadow: 0 3px 3px grey;
 }
-.restaurants--tuiles img {
+.restaurants__tuiles img {
   border-radius: 15px 15px 0 0;
   height: 200px;
   object-fit: cover;
 }
-.restaurants--legende {
+.restaurants__legende {
   display: block;
   font-size: 1;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+  margin-inline-start: 2rem;
+  margin-inline-end: 0;
+}
+.restaurants__legende h2 {
+  font-size: 1.5rem;
+}
+.restaurants__legende em {
+  font-weight: lighter;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  background: #3a3d3b;
+}
+footer .footer__logo {
+  width: 25%;
+  padding: 1rem 0;
+  fill: white;
+  filter: invert(100%);
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  font-size: smaller;
 }
 
 body {
@@ -100,7 +132,7 @@ body {
   padding: 0 1.5rem;
   box-shadow: inset 0 3px 3px grey;
 }
-.search--bar {
+.search__bar {
   border: none;
   background: transparent;
 }
@@ -117,7 +149,7 @@ body {
   font-size: 0.7em;
   padding: 5% 15%;
 }
-.presentation--txt__small {
+.presentation__txt--small {
   padding: 5px 0;
   font-size: 1.5em;
   font-weight: 100;
