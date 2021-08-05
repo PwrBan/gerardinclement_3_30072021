@@ -1,13 +1,20 @@
+@import "./base/_fonts.scss";
 @import "./utils/_variables.scss";
+@import "./utils/_mixin.scss";
 @import "./layouts/_header.scss";
 @import "./components/_btn.scss";
 @import "./pages/_fonctionnement.scss";
 @import "./layouts/_restaurants.scss";
+@import "./layouts/_menu.scss";
 @import "./layouts/_footer.scss";
 body
 {
     margin: 0;
-    font-family: "roboto", sans-serif;
+}
+a
+{
+    text-decoration: none;
+    color: unset;
 }
 .search
 {
@@ -21,6 +28,10 @@ body
         {
             border: none;
             background: transparent;
+            &:focus
+            {
+                border: 1px solid #eeeded;
+            }
         }
         .fa-map-marker-alt
         {
