@@ -1,0 +1,8 @@
+@mixin shadow{
+    box-shadow: 0 3px 3px rgb(194, 194, 194);
+}
+@mixin menu__titre {
+    display: flex;
+    align-self: start;
+    padding: 0 0.9em;
+}
