@@ -1,0 +1,96 @@
+
+.div-img
+{
+    position: relative;
+    z-index: -1;
+}
+.img
+{
+    height: 15rem;
+    width: 100%;
+}
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -5rem 0 2rem 0;
+    background: whitesmoke;
+    width: 100%;
+    border-radius: 20px;
+    &__nom-resto
+    {
+        @include menu__titre;
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__categorie
+    {
+        @include menu__titre;
+    }
+}
+.menu-btn
+{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: .5rem 0;
+    padding: .5em 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    &__nom
+    {
+        display: flex;
+        justify-self: start;
+        flex-basis: 80%;
+    }
+    &__description
+    {
+        display: flex;
+        font-size: smaller;
+        font-weight: 300;
+        flex-basis: 75%;
+        justify-self: start;
+        padding-bottom: 1rem;
+    }
+    &__prix
+    {
+        transform: translateX(40px);
+        transition: all 400ms;
+    }
+    &__ajout
+    {   
+        display: flex;
+        background: #99E2D0;
+        width: 15%;
+        height: 6.5em;
+        margin: -3.5rem 0 0px;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(85px);
+        transition: all 400ms;
+        .fa-check-circle
+        {
+            color: white;
+            font-size: large;
+            transition: all 600ms 200ms;
+        }
+    }
+    &:active > &__ajout
+    {
+        transform: translateX(16px);
+    }
+    &:active > &__ajout .fa-check-circle
+    {
+        transform: rotate(360deg);
+    }
+    &:active > &__prix
+    {
+        transform: translateX(-10px);
+    }
+    
+}
+
