@@ -1,3 +1,11 @@
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+.menu__nom-resto {
+  font-family: 'Shrikhand', sans-serif;
+}
+
 .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,11 +25,11 @@
 button {
   border-radius: 20px 20px;
   border: none;
-  -webkit-box-shadow: 3px 3px 4px grey;
-          box-shadow: 3px 3px 4px grey;
+  -webkit-box-shadow: 0 3px 3px #c2c2c2;
+          box-shadow: 0 3px 3px #c2c2c2;
   font-size: small;
   background: whitesmoke;
-  height: 2.5rem;
+  height: auto;
   font-weight: 600;
 }
 
@@ -48,6 +56,16 @@ button:hover {
 .btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.fa-heart {
+  font-weight: bold;
+}
+
+.fa-heart:active {
+  background: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
 }
 
 .fonctionnement {
@@ -85,12 +103,19 @@ button:hover {
           justify-content: space-between;
   padding-right: 25%;
   width: 85%;
+  height: 2.5rem;
   margin: 1rem 0;
   border-radius: 10px 10px 10px 10px;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+.fonctionnement button .fas {
+  color: grey;
 }
 
 .fonctionnement button:hover {
-  background: #decbf5;
+  background-color: #decbf5;
 }
 
 .fonctionnement button:hover .fas {
@@ -122,15 +147,18 @@ button:hover {
   background: white;
   border-radius: 15px;
   width: 90%;
-  height: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   margin: 5% 0;
-  -webkit-box-shadow: 0 3px 3px grey;
-          box-shadow: 0 3px 3px grey;
+  -webkit-box-shadow: 0 3px 3px #c2c2c2;
+          box-shadow: 0 3px 3px #c2c2c2;
 }
 
 .restaurants__tuiles img {
   border-radius: 15px 15px 0  0;
-  height: 200px;
+  height: 12.5rem;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -138,22 +166,157 @@ button:hover {
 .restaurants__legende {
   display: block;
   font-size: 1;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
   -webkit-margin-start: 2rem;
           margin-inline-start: 2rem;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
+  margin: 1rem;
 }
 
 .restaurants__legende h2 {
   font-size: 1.5rem;
+  margin: .5rem 0;
 }
 
 .restaurants__legende em {
   font-weight: lighter;
+}
+
+.div-img {
+  position: relative;
+  z-index: -1;
+}
+
+.img {
+  height: 15rem;
+  width: 100%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -5rem 0 2rem 0;
+  background: whitesmoke;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.menu__nom-resto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: start;
+  padding: 0 0.9em;
+  width: 85%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__categorie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: start;
+  padding: 0 0.9em;
+}
+
+.menu-btn {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: .5rem 0;
+  padding: .5em 1rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu-btn__nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: start;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+.menu-btn__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: smaller;
+  font-weight: 300;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  justify-self: start;
+  padding-bottom: 1rem;
+}
+
+.menu-btn__prix {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.menu-btn__ajout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #99E2D0;
+  width: 15%;
+  height: 6.5em;
+  margin: -3.5rem 0 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(85px);
+          transform: translateX(85px);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.menu-btn__ajout .fa-check-circle {
+  color: white;
+  font-size: large;
+  -webkit-transition: all 600ms 200ms;
+  transition: all 600ms 200ms;
+}
+
+.menu-btn:active > .menu-btn__ajout {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
+}
+
+.menu-btn:active > .menu-btn__ajout .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.menu-btn:active > .menu-btn__prix {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 
 footer {
@@ -169,7 +332,7 @@ footer {
 }
 
 footer .footer__logo {
-  width: 25%;
+  width: 10em;
   padding: 1rem 0;
   fill: white;
   -webkit-filter: invert(100%);
@@ -177,7 +340,6 @@ footer .footer__logo {
 }
 
 footer a {
-  text-decoration: none;
   color: white;
   padding: 5px 0;
   font-size: smaller;
@@ -185,7 +347,11 @@ footer a {
 
 body {
   margin: 0;
-  font-family: "roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 .search {
@@ -205,6 +371,10 @@ body {
 .search__bar {
   border: none;
   background: transparent;
+}
+
+.search__bar:focus {
+  border: 1px solid #eeeded;
 }
 
 .search .fa-map-marker-alt {
