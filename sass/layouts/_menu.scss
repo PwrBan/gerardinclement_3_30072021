@@ -29,6 +29,14 @@
     {
         @include menu__titre;
     }
+   
+}
+.menu-carte
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include chargement;
 }
 .menu-btn
 {
@@ -41,6 +49,9 @@
     padding: .5em 1rem 0;
     border-radius: 10px;
     overflow: hidden;
+    animation: defilement 2s linear 0.5s;
+    transform-origin: top;
+    opacity: 0;
     &__nom
     {
         display: flex;
@@ -93,4 +104,29 @@
     }
     
 }
+@keyframes defilement {
+    0%
+    {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 0.25;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    75%
+    {
+        opacity: 0.75;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 

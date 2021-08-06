@@ -51,6 +51,7 @@ button:hover {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
+  height: 2.5rem;
 }
 
 .btn:hover {
@@ -232,6 +233,64 @@ button:hover {
   padding: 0 0.9em;
 }
 
+.menu-carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-carte > .menu-btn:nth-child(2) {
+  -webkit-animation: defilement 1s ease 200ms forwards;
+          animation: defilement 1s ease 200ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(3) {
+  -webkit-animation: defilement 1s ease 350ms forwards;
+          animation: defilement 1s ease 350ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(4) {
+  -webkit-animation: defilement 1s ease 500ms forwards;
+          animation: defilement 1s ease 500ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(6) {
+  -webkit-animation: defilement 1s ease 650ms forwards;
+          animation: defilement 1s ease 650ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(7) {
+  -webkit-animation: defilement 1s ease 800ms forwards;
+          animation: defilement 1s ease 800ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(8) {
+  -webkit-animation: defilement 1s ease 950ms forwards;
+          animation: defilement 1s ease 950ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(10) {
+  -webkit-animation: defilement 1s ease 1100ms forwards;
+          animation: defilement 1s ease 1100ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(11) {
+  -webkit-animation: defilement 1s ease 1250ms forwards;
+          animation: defilement 1s ease 1250ms forwards;
+}
+
+.menu-carte > .menu-btn:nth-child(12) {
+  -webkit-animation: defilement 1s ease 1400ms forwards;
+          animation: defilement 1s ease 1400ms forwards;
+}
+
 .menu-btn {
   background: white;
   display: -webkit-box;
@@ -247,6 +306,11 @@ button:hover {
   padding: .5em 1rem 0;
   border-radius: 10px;
   overflow: hidden;
+  -webkit-animation: defilement 2s linear 0.5s;
+          animation: defilement 2s linear 0.5s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
 }
 
 .menu-btn__nom {
@@ -317,6 +381,50 @@ button:hover {
 .menu-btn:active > .menu-btn__prix {
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
+}
+
+@-webkit-keyframes defilement {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes defilement {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 footer {
