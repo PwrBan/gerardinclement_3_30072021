@@ -16,5 +16,13 @@ footer
         color: white;
         padding: 5px 0;
         font-size: smaller;
+        .fas
+        {
+            margin-right: 10px;
+        }
+    }
+    a:hover
+    {
+        color: $color-primary;
     }
 }

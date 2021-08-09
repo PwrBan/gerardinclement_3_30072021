@@ -6,7 +6,9 @@
 {
     display: flex;
     align-self: start;
-    padding: 0 0.9em;
+    margin-block-end: 3px;
+    font-weight: 300;
+    font-size: large;
 }
 @mixin chargement 
 {

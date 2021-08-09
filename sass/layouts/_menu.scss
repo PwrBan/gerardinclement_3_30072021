@@ -1,4 +1,7 @@
-
+body
+{
+    background: whitesmoke;
+}
 .div-img
 {
     position: relative;
@@ -8,6 +11,7 @@
 {
     height: 15rem;
     width: 100%;
+    object-fit: cover;
 }
 .menu 
 {
@@ -20,22 +24,28 @@
     border-radius: 20px;
     &__nom-resto
     {
-        @include menu__titre;
-        width: 85%;
+        display: flex;
+        width: 90%;
         justify-content: space-between;
-        align-items: center;
+        font-size: x-large;
+    }
+    &__div-categorie
+    {
+        width: 2.5rem;
+        border-bottom: 2px solid #99E2D0;
+        align-self: start;
     }
     &__categorie
     {
         @include menu__titre;
     }
-   
 }
 .menu-carte
 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
     @include chargement;
 }
 .menu-btn
@@ -44,9 +54,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
-    margin: .5rem 0;
-    padding: .5em 1rem 0;
+    width: 100%;
+    margin: 1em 0;
+    padding: 0 1rem;
     border-radius: 10px;
     overflow: hidden;
     animation: defilement 2s linear 0.5s;
@@ -56,7 +66,8 @@
     {
         display: flex;
         justify-self: start;
-        flex-basis: 80%;
+        flex-basis: 95%;
+        margin-block-end: .5em;
     }
     &__description
     {
@@ -74,11 +85,12 @@
     }
     &__ajout
     {   
+        position: relative;
         display: flex;
         background: #99E2D0;
         width: 15%;
-        height: 6.5em;
-        margin: -3.5rem 0 0px;
+        height: 12vh;
+        margin: -2.5rem 0 0px;
         align-items: center;
         justify-content: center;
         transform: translateX(85px);
@@ -102,7 +114,6 @@
     {
         transform: translateX(-10px);
     }
-    
 }
 @keyframes defilement {
     0%

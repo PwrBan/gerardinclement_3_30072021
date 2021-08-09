@@ -16,6 +16,7 @@ body {
   padding: 15px;
   -webkit-box-shadow: 0 0 8px 0 grey;
           box-shadow: 0 0 8px 0 grey;
+  background: white;
 }
 
 .header__logo img {
@@ -59,6 +60,10 @@ button:hover {
           transform: scale(0.95);
 }
 
+section .btn {
+  width: 40%;
+}
+
 .fa-heart {
   font-weight: bold;
 }
@@ -80,6 +85,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: white;
 }
 
 .fonctionnement__step {
@@ -104,7 +110,7 @@ button:hover {
           justify-content: space-between;
   padding-right: 25%;
   width: 85%;
-  height: 2.5rem;
+  height: 3rem;
   margin: 1rem 0;
   border-radius: 10px 10px 10px 10px;
   -webkit-transition: background-color 200ms;
@@ -151,7 +157,7 @@ button:hover {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
-  margin: 5% 0;
+  margin: 0 0 5%;
   -webkit-box-shadow: 0 3px 3px #c2c2c2;
           box-shadow: 0 3px 3px #c2c2c2;
 }
@@ -165,7 +171,11 @@ button:hover {
 }
 
 .restaurants__legende {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 1;
   -webkit-margin-start: 2rem;
           margin-inline-start: 2rem;
@@ -175,10 +185,25 @@ button:hover {
 .restaurants__legende h2 {
   font-size: 1.5rem;
   margin: .5rem 0;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
 }
 
-.restaurants__legende em {
+.restaurants__legende span {
   font-weight: lighter;
+}
+
+.restaurants__legende-like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  background: whitesmoke;
 }
 
 .div-img {
@@ -189,6 +214,8 @@ button:hover {
 .img {
   height: 15rem;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
@@ -212,16 +239,19 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: start;
-  padding: 0 0.9em;
-  width: 85%;
+  width: 90%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: x-large;
+}
+
+.menu__div-categorie {
+  width: 2.5rem;
+  border-bottom: 2px solid #99E2D0;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .menu__categorie {
@@ -230,7 +260,10 @@ button:hover {
   display: flex;
   -ms-flex-item-align: start;
       align-self: start;
-  padding: 0 0.9em;
+  -webkit-margin-after: 3px;
+          margin-block-end: 3px;
+  font-weight: 300;
+  font-size: large;
 }
 
 .menu-carte {
@@ -244,6 +277,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
 }
 
 .menu-carte > .menu-btn:nth-child(2) {
@@ -301,9 +335,9 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
-  margin: .5rem 0;
-  padding: .5em 1rem 0;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0 1rem;
   border-radius: 10px;
   overflow: hidden;
   -webkit-animation: defilement 2s linear 0.5s;
@@ -318,8 +352,10 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   justify-self: start;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
+  -ms-flex-preferred-size: 95%;
+      flex-basis: 95%;
+  -webkit-margin-after: .5em;
+          margin-block-end: .5em;
 }
 
 .menu-btn__description {
@@ -342,13 +378,14 @@ button:hover {
 }
 
 .menu-btn__ajout {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #99E2D0;
   width: 15%;
-  height: 6.5em;
-  margin: -3.5rem 0 0px;
+  height: 12vh;
+  margin: -2.5rem 0 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -453,6 +490,14 @@ footer a {
   font-size: smaller;
 }
 
+footer a .fas {
+  margin-right: 10px;
+}
+
+footer a:hover {
+  color: #9356DC;
+}
+
 body {
   margin: 0;
 }
@@ -510,5 +555,14 @@ a {
   padding: 5px 0;
   font-size: 1.5em;
   font-weight: 100;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: start;
+  padding: 0 4vh;
 }
 /*# sourceMappingURL=main.css.map */
