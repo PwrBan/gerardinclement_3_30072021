@@ -1,0 +1,20 @@
+@mixin shadow
+{
+    box-shadow: 0 3px 3px rgb(194, 194, 194);
+}
+@mixin menu__titre
+{
+    display: flex;
+    align-self: start;
+    margin-block-end: 3px;
+    font-weight: 300;
+    font-size: large;
+}
+@mixin chargement 
+{
+    @each $nth-childs, $value in $nth-child {
+        &> .menu-btn:#{nth-child($nth-childs)}{
+        animation: defilement 1s ease map-get($nth-child , $nth-childs) forwards;
+        }
+    }
+}
