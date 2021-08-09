@@ -1,0 +1,143 @@
+body
+{
+    background: whitesmoke;
+}
+.div-img
+{
+    position: relative;
+    z-index: -1;
+}
+.img
+{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -5rem 0 2rem 0;
+    background: whitesmoke;
+    width: 100%;
+    border-radius: 20px;
+    &__nom-resto
+    {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        font-size: x-large;
+    }
+    &__div-categorie
+    {
+        width: 2.5rem;
+        border-bottom: 2px solid #99E2D0;
+        align-self: start;
+    }
+    &__categorie
+    {
+        @include menu__titre;
+    }
+}
+.menu-carte
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    @include chargement;
+}
+.menu-btn
+{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1em 0;
+    padding: 0 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: defilement 2s linear 0.5s;
+    transform-origin: top;
+    opacity: 0;
+    &__nom
+    {
+        display: flex;
+        justify-self: start;
+        flex-basis: 95%;
+        margin-block-end: .5em;
+    }
+    &__description
+    {
+        display: flex;
+        font-size: smaller;
+        font-weight: 300;
+        flex-basis: 75%;
+        justify-self: start;
+        padding-bottom: 1rem;
+    }
+    &__prix
+    {
+        transform: translateX(40px);
+        transition: all 400ms;
+    }
+    &__ajout
+    {   
+        position: relative;
+        display: flex;
+        background: #99E2D0;
+        width: 15%;
+        height: 12vh;
+        margin: -2.5rem 0 0px;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(85px);
+        transition: all 400ms;
+        .fa-check-circle
+        {
+            color: white;
+            font-size: large;
+            transition: all 600ms 200ms;
+        }
+    }
+    &:active > &__ajout
+    {
+        transform: translateX(16px);
+    }
+    &:active > &__ajout .fa-check-circle
+    {
+        transform: rotate(360deg);
+    }
+    &:active > &__prix
+    {
+        transform: translateX(-10px);
+    }
+}
+@keyframes defilement {
+    0%
+    {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 0.25;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    75%
+    {
+        opacity: 0.75;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+

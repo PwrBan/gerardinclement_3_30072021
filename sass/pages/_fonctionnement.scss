@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background:white;
     &__step
     {
         background: $color-primary;
@@ -20,11 +21,17 @@
         justify-content: space-between;
         padding-right: 25%;
         width: 85%;
+        height: 3rem;
         margin: 1rem 0;
         border-radius: 10px 10px 10px 10px;
+        transition: background-color 200ms;
+        .fas
+        {
+            color: grey;
+        }
         &:hover
         {
-            background: #decbf5;
+            background-color: #decbf5;
             
                 .fas
                 {

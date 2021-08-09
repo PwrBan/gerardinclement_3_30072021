@@ -1,7 +1,32 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-
-@mixin shadow{
-    box-shadow: 0 3px 3px grey;
-}
+$nth-child: (
+    2: (
+        200ms
+    ),
+    3: (
+        350ms
+    ),
+    4: (
+        500ms
+    ),
+    6: (
+        650ms
+    ),
+    7: (
+        800ms
+    ),
+    8: (
+        950ms
+    ),
+    10: (
+        1100ms
+    ),
+    11: (
+        1250ms
+    ),
+    12: (
+        1400ms
+    )
+);

@@ -2,10 +2,10 @@ button
 {
     border-radius: 20px 20px;
     border: none;
-    box-shadow: 3px 3px 4px grey;
+    @include shadow;
     font-size: small;
     background: whitesmoke;
-    height: 2.5rem;
+    height: auto;
     font-weight: 600;
     &:hover
     {
@@ -21,8 +21,22 @@ button
             color: white;
             transform: scale(1);
             transition: transform .3s;
+            height: 2.5rem;
             &:hover
             {
                 transform: scale(.95);
             }
+}
+section .btn
+{
+    width: 40%;
+}
+.fa-heart
+{
+    font-weight: bold;
+}
+.fa-heart:active
+{
+    background: rgb(255,121,218);
+    background: linear-gradient($color-primary, $color-secondary);
 }
