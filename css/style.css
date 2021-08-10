@@ -101,6 +101,7 @@ section .btn {
 }
 .restaurants__tuiles {
   display: flex;
+  position: relative;
   flex-direction: column;
   background: white;
   border-radius: 15px;
@@ -115,6 +116,14 @@ section .btn {
   width: 100%;
   object-fit: cover;
 }
+.restaurants__nouveau {
+  position: absolute;
+  padding: 0.5rem;
+  background: #99E2D0;
+  top: 15px;
+  right: 20px;
+  border-radius: 5px;
+}
 .restaurants__legende {
   display: flex;
   flex-wrap: wrap;
@@ -125,10 +134,11 @@ section .btn {
 .restaurants__legende h2 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
-  flex-basis: 90%;
+  flex-basis: 80%;
 }
 .restaurants__legende span {
   font-weight: lighter;
+  flex-basis: 80%;
 }
 .restaurants__legende-like {
   display: flex;
@@ -216,8 +226,9 @@ body {
   background: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
+  height: 5rem;
   margin: 1em 0;
   padding: 0 1rem;
   border-radius: 10px;
@@ -236,24 +247,25 @@ body {
   display: flex;
   font-size: smaller;
   font-weight: 300;
-  flex-basis: 75%;
+  flex-basis: 80%;
   justify-self: start;
   padding-bottom: 1rem;
 }
 .menu-btn__prix {
   transform: translateX(40px);
   transition: all 400ms;
+  padding-right: 1rem;
 }
 .menu-btn__ajout {
   position: relative;
-  display: flex;
+  display: none;
   background: #99E2D0;
   width: 15%;
-  height: 12vh;
-  margin: -2.5rem 0 0px;
+  height: 4.3rem;
+  margin: -4.3rem 0 0px;
   align-items: center;
   justify-content: center;
-  transform: translateX(85px);
+  transform: translateX(17rem);
   transition: all 400ms;
 }
 .menu-btn__ajout .fa-check-circle {
@@ -262,13 +274,14 @@ body {
   transition: all 600ms 200ms;
 }
 .menu-btn:active > .menu-btn__ajout {
-  transform: translateX(16px);
+  display: flex;
+  animation: ajout 400ms ease-in-out;
 }
 .menu-btn:active > .menu-btn__ajout .fa-check-circle {
   transform: rotate(360deg);
 }
 .menu-btn:active > .menu-btn__prix {
-  transform: translateX(-10px);
+  transform: translateX(-0.5rem);
 }
 
 @keyframes defilement {
@@ -288,6 +301,11 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes ajout {
+  0% {
+    display: flex;
   }
 }
 footer {

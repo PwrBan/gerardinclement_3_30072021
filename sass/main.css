@@ -147,6 +147,7 @@ section .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -170,6 +171,15 @@ section .btn {
      object-fit: cover;
 }
 
+.restaurants__nouveau {
+  position: absolute;
+  padding: .5rem;
+  background: #99E2D0;
+  top: 15px;
+  right: 20px;
+  border-radius: 5px;
+}
+
 .restaurants__legende {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,12 +195,14 @@ section .btn {
 .restaurants__legende h2 {
   font-size: 1.5rem;
   margin: .5rem 0;
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 .restaurants__legende span {
   font-weight: lighter;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 .restaurants__legende-like {
@@ -332,10 +344,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   width: 100%;
+  height: 5rem;
   margin: 1em 0;
   padding: 0 1rem;
   border-radius: 10px;
@@ -364,8 +377,8 @@ body {
   display: flex;
   font-size: smaller;
   font-weight: 300;
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
   justify-self: start;
   padding-bottom: 1rem;
 }
@@ -375,25 +388,24 @@ body {
           transform: translateX(40px);
   -webkit-transition: all 400ms;
   transition: all 400ms;
+  padding-right: 1rem;
 }
 
 .menu-btn__ajout {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   background: #99E2D0;
   width: 15%;
-  height: 12vh;
-  margin: -2.5rem 0 0px;
+  height: 4.3rem;
+  margin: -4.3rem 0 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateX(85px);
-          transform: translateX(85px);
+  -webkit-transform: translateX(17rem);
+          transform: translateX(17rem);
   -webkit-transition: all 400ms;
   transition: all 400ms;
 }
@@ -406,8 +418,11 @@ body {
 }
 
 .menu-btn:active > .menu-btn__ajout {
-  -webkit-transform: translateX(16px);
-          transform: translateX(16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: ajout 400ms ease-in-out;
+          animation: ajout 400ms ease-in-out;
 }
 
 .menu-btn:active > .menu-btn__ajout .fa-check-circle {
@@ -416,8 +431,8 @@ body {
 }
 
 .menu-btn:active > .menu-btn__prix {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
 }
 
 @-webkit-keyframes defilement {
@@ -461,6 +476,25 @@ body {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes ajout {
+  0% {
+    display: -webkit-box;
+    display: flex;
+  }
+  10% {
+  }
+}
+
+@keyframes ajout {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  10% {
   }
 }
 

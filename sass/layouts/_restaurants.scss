@@ -7,6 +7,7 @@
     &__tuiles
     {
         display: flex;
+        position: relative;
         flex-direction: column;
         background: white;
         border-radius: 15px;
@@ -21,7 +22,17 @@
         width: 100%;
         object-fit: cover;    
         }
+        
     }
+    &__nouveau
+        {
+            position: absolute;
+            padding: .5rem;
+            background: $color-tertiary;
+            top: 15px;
+            right: 20px;
+            border-radius: 5px;
+        }
     &__legende
     {
         display: flex;
@@ -33,11 +44,12 @@
         {
             font-size: 1.5rem;
             margin: .5rem 0;
-            flex-basis: 90%;
+            flex-basis: 80%;
         }
         span
         {
             font-weight: lighter;
+            flex-basis: 80%;
         }
         &-like
         {
