@@ -50,11 +50,13 @@ body
 }
 .menu-btn
 {
+    position: relative;
     background: white;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     width: 100%;
+    height: 5rem;
     margin: 1em 0;
     padding: 0 1rem;
     border-radius: 10px;
@@ -74,26 +76,25 @@ body
         display: flex;
         font-size: smaller;
         font-weight: 300;
-        flex-basis: 75%;
+        flex-basis: 85%;
         justify-self: start;
         padding-bottom: 1rem;
     }
     &__prix
     {
-        transform: translateX(40px);
         transition: all 400ms;
+        padding-right: 1rem;
     }
     &__ajout
     {   
-        position: relative;
         display: flex;
+        position: absolute;
+        right: -15%;
         background: #99E2D0;
         width: 15%;
-        height: 12vh;
-        margin: -2.5rem 0 0px;
+        height: 5rem;
         align-items: center;
         justify-content: center;
-        transform: translateX(85px);
         transition: all 400ms;
         .fa-check-circle
         {
@@ -104,7 +105,7 @@ body
     }
     &:active > &__ajout
     {
-        transform: translateX(16px);
+        transform: translateX(-100%);
     }
     &:active > &__ajout .fa-check-circle
     {
@@ -112,10 +113,11 @@ body
     }
     &:active > &__prix
     {
-        transform: translateX(-10px);
+        transform: translateX(-100%);
     }
 }
-@keyframes defilement {
+@keyframes defilement 
+{
     0%
     {
         transform: translateY(-10px);

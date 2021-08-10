@@ -223,6 +223,7 @@ body {
 }
 
 .menu-btn {
+  position: relative;
   background: white;
   display: flex;
   flex-wrap: wrap;
@@ -247,25 +248,23 @@ body {
   display: flex;
   font-size: smaller;
   font-weight: 300;
-  flex-basis: 80%;
+  flex-basis: 85%;
   justify-self: start;
   padding-bottom: 1rem;
 }
 .menu-btn__prix {
-  transform: translateX(40px);
   transition: all 400ms;
   padding-right: 1rem;
 }
 .menu-btn__ajout {
-  position: relative;
-  display: none;
+  display: flex;
+  position: absolute;
+  right: -15%;
   background: #99E2D0;
   width: 15%;
-  height: 4.3rem;
-  margin: -4.3rem 0 0px;
+  height: 5rem;
   align-items: center;
   justify-content: center;
-  transform: translateX(17rem);
   transition: all 400ms;
 }
 .menu-btn__ajout .fa-check-circle {
@@ -274,14 +273,13 @@ body {
   transition: all 600ms 200ms;
 }
 .menu-btn:active > .menu-btn__ajout {
-  display: flex;
-  animation: ajout 400ms ease-in-out;
+  transform: translateX(-100%);
 }
 .menu-btn:active > .menu-btn__ajout .fa-check-circle {
   transform: rotate(360deg);
 }
 .menu-btn:active > .menu-btn__prix {
-  transform: translateX(-0.5rem);
+  transform: translateX(-100%);
 }
 
 @keyframes defilement {
@@ -301,11 +299,6 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1;
-  }
-}
-@keyframes ajout {
-  0% {
-    display: flex;
   }
 }
 footer {
