@@ -1,5 +1,6 @@
 .header__logo
 {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 15px ;
@@ -8,5 +9,10 @@
         img 
         {
             width: 125px;
+        }
+        .fas
+        {
+            position: absolute;
+            right: 95%;
         }
 }

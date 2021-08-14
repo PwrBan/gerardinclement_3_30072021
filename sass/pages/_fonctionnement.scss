@@ -1,11 +1,14 @@
 .fonctionnement
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     background:white;
     &__step
     {
+        position: absolute;
+        left:8%;
         background: $color-primary;
         color: white;
         border-radius: 100%;
@@ -14,12 +17,16 @@
         padding: 2px;
         margin-left:-10px;
     }
+    &__div
+    {
+        display: flex;
+        position: relative;
+    }
     button
     {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding-right: 25%;
+        justify-content: center;
         width: 85%;
         height: 3rem;
         margin: 1rem 0;
@@ -28,6 +35,8 @@
         .fas
         {
             color: grey;
+            position: absolute;
+            left: -23%;
         }
         &:hover
         {
