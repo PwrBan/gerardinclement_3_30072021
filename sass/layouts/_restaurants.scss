@@ -39,10 +39,8 @@
         flex-wrap: wrap;
         font-size: 1;
         margin-inline-start: 2rem;
-        margin: 1rem;
-        h2
+        h3
         {
-            font-size: 1.5rem;
             margin: .5rem 0;
             flex-basis: 80%;
         }
@@ -50,11 +48,16 @@
         {
             font-weight: lighter;
             flex-basis: 80%;
+            margin-bottom: .5rem;
         }
         &-like
         {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 15px;
+            flex-basis: 20%;
+            transition: all 10s ease;
         }
     }
 

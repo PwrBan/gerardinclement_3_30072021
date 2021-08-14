@@ -30,24 +30,40 @@
             <button class="btn presentation__btn">Explorer nos restaurants</button>
         </div>
     </header>
-
+        <div class="loader">
+            <div class="loader__icon">
+            <i class="fas fa-fish"></i>
+            <i class="fas fa-egg"></i>
+            <i class="fas fa-bacon"></i>
+            <i class="fas fa-pepper-hot"></i>
+            <i class="fas fa-carrot"></i>
+            </div>
+            <img src="./images/icones/marmite.svg" alt="" class="casserole">
+            <div class="baton"></div>
+        </div>
     <section>
         <div class="fonctionnement">
             <h2 class="titre">Fonctionnement</h2>
             <button>
                 <i class="fonctionnement__step">1</i>
-                    <i class="fas fa-mobile-alt"></i>
-                    Choissisez un restaurant
+                    <div class="fonctionnement__div">
+                        <i class="fas fa-mobile-alt"></i>
+                        Choissisez un restaurant
+                    </div>
             </button>
             <button>
                 <i class="fonctionnement__step">2</i>
-                    <i class="fas fa-list-ul"></i>
-                    Composez votre menu
+                    <div class="fonctionnement__div">
+                        <i class="fas fa-list-ul"></i>
+                        Composez votre menu
+                    </div>
             </button>
             <button>
                 <i class="fonctionnement__step">3</i>
-                    <i class="fas fa-store"></i>
-                    Dégustez au restaurant
+                    <div class="fonctionnement__div">
+                        <i class="fas fa-store"></i>
+                        Dégustez au restaurant
+                    </div>
             </button>
         </div>
     </section>
@@ -60,7 +76,7 @@
             <div class="restaurants__nouveau">Nouveau</div>
             <div class="restaurants__legende">
                 <h3>La palette du goût</h3>
-                <div class="like restaurants__legende-like"><i class="far fa-heart fa-2x"></i></div>
+                <div class="like restaurants__legende-like"><i class="fas fa-heart"></i></div>
                 <span>Ménilmontant</span>
             </div>
         </a>
@@ -73,8 +89,9 @@
             <div class="restaurants__nouveau">Nouveau</div>
             <div class='restaurants__legende'>
                 <h3>La note enchantée</h3>
+                <div class="like restaurants__legende-like"><i class="fas fa-heart"></i></div>
                 <span>Charonne</span>
-                <div class="like restaurants__legende-like"><i class="far fa-heart fa-2x"></i></div>
+                
             </div>
             </a>
         </article>
@@ -84,7 +101,7 @@
             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La palette du goût">
             <div class='restaurants__legende'>
                 <h3>A la française</h3>
-                <div class="like restaurants__legende-like"><i class="far fa-heart fa-2x"></i></div>
+                <div class="like restaurants__legende-like"><i class="fas fa-heart"></i></div>
                 <span>Cité Rouge</span>
             </div>
         </a>
@@ -94,7 +111,7 @@
             <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La palette du goût">
             <div class='restaurants__legende'>
                 <h3>Le délice des sens</h3>
-                <div class="like restaurants__legende-like"><i class="far fa-heart fa-2x"></i></div>
+                <div class="like restaurants__legende-like"><i class="fas fa-heart"></i></div>
                 <span>Folie-Méricourt</span>
             </div>
         </a>
@@ -103,9 +120,9 @@
     <footer>
         <img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class='footer__logo'>
         <a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a>
-        <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+        <a href=""><i class="fas fa-hands-helping fa-xs"></i>Devenir partenaire</a>
         <a href="">Mentionns légales</a>
-        <a href="">Contact</a>
+        <a href="mailto:ohmyfood@gmail.com">Contact</a>
     </footer>
     
 </body>

@@ -103,15 +103,15 @@ body
             transition: all 600ms 200ms;
         }
     }
-    &:active > &__ajout
+    &:hover:active > &__ajout
     {
         transform: translateX(-100%);
     }
-    &:active > &__ajout .fa-check-circle
+    &:hover:active > &__ajout .fa-check-circle
     {
         transform: rotate(360deg);
     }
-    &:active > &__prix
+    &:hover:active > &__prix
     {
         transform: translateX(-100%);
     }
