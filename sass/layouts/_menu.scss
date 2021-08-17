@@ -56,11 +56,12 @@ body
     flex-wrap: wrap;
     justify-content: start;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     margin: 1em 0;
     padding: 0 1rem;
     border-radius: 10px;
     overflow: hidden;
+    justify-content: space-between;
     animation: defilement 2s linear 0.5s;
     transform-origin: top;
     opacity: 0;
@@ -70,6 +71,8 @@ body
         justify-self: start;
         flex-basis: 95%;
         margin-block-end: .5em;
+        white-space: nowrap;
+        text-overflow: "...";
     }
     &__description
     {
@@ -79,11 +82,22 @@ body
         flex-basis: 85%;
         justify-self: start;
         padding-bottom: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__prix
     {
         transition: all 400ms;
-        padding-right: 1rem;
+        padding-right: 3rem;
+        white-space: nowrap;
+        overflow-wrap: nowrap;
+        @media (max-width: 552px) {
+            padding-right: 1rem;
+        }
+        @media (min-width:1440px) {
+            padding-right: 5rem;
+        }
     }
     &__ajout
     {   
@@ -92,7 +106,7 @@ body
         right: -15%;
         background: #99E2D0;
         width: 15%;
-        height: 5rem;
+        height: 4rem;
         align-items: center;
         justify-content: center;
         transition: all 400ms;
@@ -113,7 +127,7 @@ body
     }
     &:hover:active > &__prix
     {
-        transform: translateX(-100%);
+        transform: translateX(-115%);
     }
 }
 @keyframes defilement 

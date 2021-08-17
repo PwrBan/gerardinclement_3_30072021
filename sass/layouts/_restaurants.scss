@@ -39,6 +39,7 @@
         flex-wrap: wrap;
         font-size: 1;
         margin-inline-start: 2rem;
+        justify-content: space-between;
         h3
         {
             margin: .5rem 0;
@@ -55,10 +56,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 15px;
-            flex-basis: 20%;
+            margin-top: 1.5rem;
+            margin-right: 1rem;
             transition: all 10s ease;
         }
     }
-
 }

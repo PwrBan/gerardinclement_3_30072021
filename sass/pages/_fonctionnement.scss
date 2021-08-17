@@ -8,7 +8,7 @@
     &__step
     {
         position: absolute;
-        left:8%;
+        left:0%;
         background: $color-primary;
         color: white;
         border-radius: 100%;
@@ -24,6 +24,7 @@
     }
     button
     {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,7 +32,7 @@
         height: 3rem;
         margin: 1rem 0;
         border-radius: 10px 10px 10px 10px;
-        transition: background-color 200ms;
+        z-index: 1;
         .fas
         {
             color: grey;
@@ -40,12 +41,29 @@
         }
         &:hover
         {
-            background-color: #decbf5;
-            
+            &::after
+            {
+                opacity: 1;
+            }           
                 .fas
                 {
                     color: $color-primary;
                 }
+        }
+        &::after
+        {
+            content: "";
+            position: absolute;
+            background-color: lighten($color-primary, 25%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: 10px 10px 10px 10px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
         }
     }
 }

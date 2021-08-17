@@ -63,7 +63,7 @@ section .btn {
   background: linear-gradient(to bottom, transparent 33%, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
-  transition: all 2s ease-in;
+  transition: all 500ms ease-in;
   background-size: 100% 200%;
 }
 
@@ -83,7 +83,7 @@ section .btn {
 }
 .fonctionnement__step {
   position: absolute;
-  left: 8%;
+  left: 0%;
   background: #9356DC;
   color: white;
   border-radius: 100%;
@@ -97,6 +97,7 @@ section .btn {
   position: relative;
 }
 .fonctionnement button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,18 +105,31 @@ section .btn {
   height: 3rem;
   margin: 1rem 0;
   border-radius: 10px 10px 10px 10px;
-  transition: background-color 200ms;
+  z-index: 1;
 }
 .fonctionnement button .fas {
   color: grey;
   position: absolute;
   left: -23%;
 }
-.fonctionnement button:hover {
-  background-color: #decbf5;
+.fonctionnement button:hover::after {
+  opacity: 1;
 }
 .fonctionnement button:hover .fas {
   color: #9356DC;
+}
+.fonctionnement button::after {
+  content: "";
+  position: absolute;
+  background-color: #d7c0f2;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 10px 10px 10px 10px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .restaurants {
@@ -154,6 +168,7 @@ section .btn {
   flex-wrap: wrap;
   font-size: 1;
   margin-inline-start: 2rem;
+  justify-content: space-between;
 }
 .restaurants__legende h3 {
   margin: 0.5rem 0;
@@ -168,8 +183,8 @@ section .btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 15px;
-  flex-basis: 20%;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
   transition: all 10s ease;
 }
 
@@ -257,11 +272,12 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   margin: 1em 0;
   padding: 0 1rem;
   border-radius: 10px;
   overflow: hidden;
+  justify-content: space-between;
   animation: defilement 2s linear 0.5s;
   transform-origin: top;
   opacity: 0;
@@ -271,6 +287,8 @@ body {
   justify-self: start;
   flex-basis: 95%;
   margin-block-end: 0.5em;
+  white-space: nowrap;
+  text-overflow: "...";
 }
 .menu-btn__description {
   display: flex;
@@ -279,10 +297,25 @@ body {
   flex-basis: 85%;
   justify-self: start;
   padding-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-btn__prix {
   transition: all 400ms;
-  padding-right: 1rem;
+  padding-right: 3rem;
+  white-space: nowrap;
+  overflow-wrap: nowrap;
+}
+@media (max-width: 552px) {
+  .menu-btn__prix {
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .menu-btn__prix {
+    padding-right: 5rem;
+  }
 }
 .menu-btn__ajout {
   display: flex;
@@ -290,7 +323,7 @@ body {
   right: -15%;
   background: #99E2D0;
   width: 15%;
-  height: 5rem;
+  height: 4rem;
   align-items: center;
   justify-content: center;
   transition: all 400ms;
@@ -307,7 +340,7 @@ body {
   transform: rotate(360deg);
 }
 .menu-btn:hover:active > .menu-btn__prix {
-  transform: translateX(-100%);
+  transform: translateX(-115%);
 }
 
 @keyframes defilement {
