@@ -240,7 +240,10 @@ section .btn {
 }
 
 .restaurants__legende h3 {
-  margin: .5rem 0;
+  -webkit-margin-before: .5em;
+          margin-block-start: .5em;
+  -webkit-margin-after: .5em;
+          margin-block-end: .5em;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
 }
@@ -263,10 +266,7 @@ section .btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  -webkit-transition: all 10s ease;
-  transition: all 10s ease;
+  padding: 1rem 2rem 0 0;
 }
 
 body {
