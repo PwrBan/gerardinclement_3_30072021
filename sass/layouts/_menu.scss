@@ -65,18 +65,19 @@ body
     animation: defilement 2s linear 0.5s;
     transform-origin: top;
     opacity: 0;
+    text-align: start;
     &__nom
     {
-        display: flex;
-        justify-self: start;
-        flex-basis: 95%;
+        display: block;
+        width: 90%;
         margin-block-end: .5em;
         white-space: nowrap;
-        text-overflow: "...";
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     &__description
     {
-        display: flex;
+        display: block;
         font-size: smaller;
         font-weight: 300;
         flex-basis: 85%;
@@ -85,19 +86,16 @@ body
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        max-width: 85%;
     }
     &__prix
     {
+        display: flex;
+        width: 5%;
         transition: all 400ms;
-        padding-right: 3rem;
+        text-align: end;
         white-space: nowrap;
         overflow-wrap: nowrap;
-        @media (max-width: 552px) {
-            padding-right: 1rem;
-        }
-        @media (min-width:1440px) {
-            padding-right: 5rem;
-        }
     }
     &__ajout
     {   
@@ -127,7 +125,7 @@ body
     }
     &:hover:active > &__prix
     {
-        transform: translateX(-115%);
+        transform: translateX(-320%);
     }
 }
 @keyframes defilement 
