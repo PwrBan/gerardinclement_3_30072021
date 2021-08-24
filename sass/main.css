@@ -30,7 +30,8 @@ body {
 }
 
 .index {
-  /*animation: scroll 4s;*/
+  -webkit-animation: scroll 4s;
+          animation: scroll 4s;
 }
 
 .loader {
