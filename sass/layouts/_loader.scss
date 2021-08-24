@@ -1,18 +1,20 @@
 .index
 {
-  animation: scroll 4s;
+  /*animation: scroll 4s;*/
 }
 .loader
 {
   position:absolute;
+  top: 0;
   width: 100%;
-  height: 250%;
+  height: 340vh;
   z-index: 4;
   background: $color-primary;
-  top: 0;
   animation: loader__background 4s ease forwards;
   &__wrapper
   {
+    position: sticky;
+    top: 0;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -25,6 +27,7 @@
   {
     display: flex;
     z-index: 0;
+    transform: translateY(-5rem);
   }
   img
   {

@@ -23,19 +23,21 @@ body {
 }
 
 .index {
-  animation: scroll 4s;
+  /*animation: scroll 4s;*/
 }
 
 .loader {
   position: absolute;
+  top: 0;
   width: 100%;
-  height: 250%;
+  height: 340vh;
   z-index: 4;
   background: #9356DC;
-  top: 0;
   animation: loader__background 4s ease forwards;
 }
 .loader__wrapper {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +49,7 @@ body {
 .loader__icon i {
   display: flex;
   z-index: 0;
+  transform: translateY(-5rem);
 }
 .loader img {
   z-index: 1;
@@ -320,7 +323,7 @@ section .btn {
 }
 .restaurants__legende h3 {
   margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  margin-block-end: 0;
   flex-basis: 95%;
 }
 .restaurants__legende span {
@@ -332,7 +335,7 @@ section .btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.5rem 2rem 0 0;
+  padding: 0.7rem 2rem 0 0;
 }
 
 body {
