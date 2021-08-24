@@ -756,7 +756,7 @@ body {
 
 .menu-btn__nom {
   display: block;
-  width: 90%;
+  width: 85%;
   -webkit-margin-after: .5em;
           margin-block-end: .5em;
   white-space: nowrap;
@@ -776,7 +776,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 85%;
+  max-width: 95%;
 }
 
 .menu-btn__prix {
@@ -830,6 +830,21 @@ body {
 .menu-btn:hover:active > .menu-btn__prix {
   -webkit-transform: translateX(-320%);
           transform: translateX(-320%);
+}
+
+.menu-btn:hover > .test {
+  width: 80%;
+}
+
+.test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 @-webkit-keyframes defilement {

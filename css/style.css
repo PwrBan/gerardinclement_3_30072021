@@ -444,7 +444,7 @@ body {
 }
 .menu-btn__nom {
   display: block;
-  width: 90%;
+  width: 85%;
   margin-block-end: 0.5em;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -460,7 +460,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 85%;
+  max-width: 95%;
 }
 .menu-btn__prix {
   display: flex;
@@ -494,6 +494,15 @@ body {
 }
 .menu-btn:hover:active > .menu-btn__prix {
   transform: translateX(-320%);
+}
+.menu-btn:hover > .test {
+  width: 80%;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  transition: all 400ms;
 }
 
 @keyframes defilement {
