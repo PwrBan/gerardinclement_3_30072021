@@ -30,7 +30,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 340vh;
+  height: 301vh;
   z-index: 4;
   background: #9356DC;
   animation: loader__background 3s ease forwards;
