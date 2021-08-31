@@ -56,7 +56,7 @@ body
     flex-wrap: wrap;
     justify-content: start;
     width: 100%;
-    height: 4rem;
+    height: 4.5rem;
     margin: 1em 0;
     padding: 0 1rem;
     border-radius: 10px;
@@ -66,11 +66,13 @@ body
     transform-origin: top;
     opacity: 0;
     text-align: start;
+    box-shadow: 2px 2px 20px rgb(199, 199, 199);
     &__nom
     {
         display: block;
         width: 85%;
-        margin-block-end: .5em;
+        margin-block-start: .7em;
+        margin-block-end: .3em;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -95,7 +97,14 @@ body
         transition: all 400ms;
         text-align: end;
         white-space: nowrap;
-        overflow-wrap: nowrap;
+    }
+    &__legende
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: all 400ms;
+        margin-bottom: 5%;
     }
     &__ajout
     {   
@@ -104,7 +113,7 @@ body
         right: -15%;
         background: #99E2D0;
         width: 15%;
-        height: 4rem;
+        height: 4.5rem;
         align-items: center;
         justify-content: center;
         transition: all 400ms;
@@ -115,28 +124,22 @@ body
             transition: all 600ms 200ms;
         }
     }
-    &:hover:active > &__ajout
+    &:hover > &__ajout
     {
         transform: translateX(-100%);
     }
-    &:hover:active > &__ajout .fa-check-circle
+    &:hover > &__ajout .fa-check-circle
     {
         transform: rotate(360deg);
     }
-    &:hover:active > &__prix
+    &:hover > &__prix
     {
         transform: translateX(-320%);
     }
-    &:hover > .test
+    &:hover > .menu-btn__legende
     {
         width: 80%;
     }
-}
-.test
-{
-    display: flex;
-    justify-content: space-between;
-    transition: all 400ms;
 }
 @keyframes defilement 
 {
