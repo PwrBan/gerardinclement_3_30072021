@@ -23,7 +23,7 @@ body {
 }
 
 .index {
-  animation: scroll 4s;
+  animation: scroll 3s;
 }
 
 .loader {
@@ -33,7 +33,7 @@ body {
   height: 340vh;
   z-index: 4;
   background: #9356DC;
-  animation: loader__background 4s ease forwards;
+  animation: loader__background 3s ease forwards;
 }
 .loader__wrapper {
   position: sticky;
@@ -43,7 +43,7 @@ body {
   align-items: center;
   justify-content: center;
   transform: translateY(100%);
-  animation: loader 4s forwards;
+  animation: loader 3s forwards;
   z-index: 5;
 }
 .loader__icon i {
@@ -317,7 +317,6 @@ section .btn {
 .restaurants__legende {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1;
   margin-inline-start: 2rem;
   justify-content: space-between;
 }
@@ -431,7 +430,7 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   width: 100%;
-  height: 4rem;
+  height: 4.5rem;
   margin: 1em 0;
   padding: 0 1rem;
   border-radius: 10px;
@@ -441,11 +440,13 @@ body {
   transform-origin: top;
   opacity: 0;
   text-align: start;
+  box-shadow: 2px 2px 20px #c7c7c7;
 }
 .menu-btn__nom {
   display: block;
   width: 85%;
-  margin-block-end: 0.5em;
+  margin-block-start: 0.7em;
+  margin-block-end: 0.3em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -468,7 +469,13 @@ body {
   transition: all 400ms;
   text-align: end;
   white-space: nowrap;
-  overflow-wrap: nowrap;
+}
+.menu-btn__legende {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 400ms;
+  margin-bottom: 5%;
 }
 .menu-btn__ajout {
   display: flex;
@@ -476,7 +483,7 @@ body {
   right: -15%;
   background: #99E2D0;
   width: 15%;
-  height: 4rem;
+  height: 4.5rem;
   align-items: center;
   justify-content: center;
   transition: all 400ms;
@@ -486,23 +493,17 @@ body {
   font-size: large;
   transition: all 600ms 200ms;
 }
-.menu-btn:hover:active > .menu-btn__ajout {
+.menu-btn:hover > .menu-btn__ajout {
   transform: translateX(-100%);
 }
-.menu-btn:hover:active > .menu-btn__ajout .fa-check-circle {
+.menu-btn:hover > .menu-btn__ajout .fa-check-circle {
   transform: rotate(360deg);
 }
-.menu-btn:hover:active > .menu-btn__prix {
+.menu-btn:hover > .menu-btn__prix {
   transform: translateX(-320%);
 }
-.menu-btn:hover > .test {
+.menu-btn:hover > .menu-btn__legende {
   width: 80%;
-}
-
-.test {
-  display: flex;
-  justify-content: space-between;
-  transition: all 400ms;
 }
 
 @keyframes defilement {

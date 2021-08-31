@@ -1,6 +1,6 @@
 .index
 {
-  animation: scroll 4s;
+  animation: scroll 3s;
 }
 .loader
 {
@@ -10,7 +10,7 @@
   height: 340vh;
   z-index: 4;
   background: $color-primary;
-  animation: loader__background 4s ease forwards;
+  animation: loader__background 3s ease forwards;
   &__wrapper
   {
     position: sticky;
@@ -20,7 +20,7 @@
     align-items:center;
     justify-content: center;
     transform:translateY(100%);
-    animation: loader 4s forwards;
+    animation: loader 3s forwards;
     z-index: 5;
   }
   &__icon i
