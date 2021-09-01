@@ -2,38 +2,31 @@
 {
   animation: scroll 3s;
 }
-.loader
-{
-  position:absolute;
-  top: 0;
-  width: 100%;
-  height: 301vh;
-  z-index: 4;
-  background: $color-primary;
-  animation: loader__background 3s ease forwards;
-  &__wrapper
+  .loader
   {
-    position: sticky;
+    position: fixed;
     top: 0;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content: center;
-    transform:translateY(100%);
     animation: loader 3s forwards;
     z-index: 5;
+    background: $color-primary;
+    height: 100vh;
+    width: 100%;
+  
+      &__icon i
+      {
+        display: flex;
+        z-index: 0;
+        transform: translateY(-5rem);
+      }
+      img
+      {
+        z-index:1;
+      }
   }
-  &__icon i
-  {
-    display: flex;
-    z-index: 0;
-    transform: translateY(-5rem);
-  }
-  img
-  {
-    z-index:1;
-  }
-}
 .fa-fish
 {
   animation: fish 3s ease 200ms forwards;
@@ -144,29 +137,12 @@
 }
 @keyframes loader
 {
-  0%
-  {
-    filter: grayscale(0);
-  }
   95%
   {
-    filter: opacity(.9);
+    filter: opacity(1);
   }
   100%
   {
-    filter: opacity(0);
-  }
-}
-@keyframes loader__background
-{
-  99%
-  {
-    filter: opacity(.99);
-    z-index: 100;
-  }
-  100%
-  {
-    z-index: -100;
     filter: opacity(0);
   }
 }
