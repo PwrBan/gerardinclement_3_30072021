@@ -27,6 +27,7 @@ body {
 .header__logo .fas {
   position: absolute;
   right: 95%;
+  margin-top: 3px;
 }
 
 .index {
@@ -261,22 +262,26 @@ body {
 }
 
 @-webkit-keyframes loader {
-  95% {
+  99% {
+    z-index: 3;
     -webkit-filter: opacity(1);
             filter: opacity(1);
   }
   100% {
+    z-index: 0;
     -webkit-filter: opacity(0);
             filter: opacity(0);
   }
 }
 
 @keyframes loader {
-  95% {
+  99% {
+    z-index: 3;
     -webkit-filter: opacity(1);
             filter: opacity(1);
   }
   100% {
+    z-index: 0;
     -webkit-filter: opacity(0);
             filter: opacity(0);
   }
@@ -356,8 +361,8 @@ section .btn {
   background: linear-gradient(to bottom, transparent 33%, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-transition: all 500ms ease-in;
-  transition: all 500ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
   background-size: 100% 200%;
 }
 
@@ -385,7 +390,7 @@ section .btn {
 
 .fonctionnement__step {
   position: absolute;
-  left: -1%;
+  left: -8px;
   background: #9356DC;
   color: white;
   border-radius: 100%;

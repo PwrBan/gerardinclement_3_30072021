@@ -137,12 +137,14 @@
 }
 @keyframes loader
 {
-  95%
+  99%
   {
+    z-index: 3;
     filter: opacity(1);
   }
   100%
   {
+    z-index: 0;
     filter: opacity(0);
   }
 }

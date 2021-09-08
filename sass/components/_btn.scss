@@ -42,7 +42,7 @@ section .btn
     background: linear-gradient(to bottom,transparent 33%, $color-primary, $color-secondary);
     -webkit-background-clip: text;
     background-clip: text;
-    transition: all 500ms ease-in;
+    transition: all 200ms ease-in;
     background-size: 100% 200%;
 
 }
